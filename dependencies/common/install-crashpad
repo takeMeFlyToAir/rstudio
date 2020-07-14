@@ -70,7 +70,7 @@ then
    mkdir -p $DEPOT_TOOLS_DIR
    cd $DEPOT_TOOLS_DIR
 
-   git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git .
+   git clone --depth 1 https://source.codeaurora.org/quic/lc/chromium/tools/depot_tools .
 else
    echo "depot_tools already installed in $DEPOT_TOOLS_DIR"
 fi
