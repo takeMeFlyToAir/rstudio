@@ -1,0 +1,97 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:rs="urn:import:org.rstudio.core.client.widget"
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+   <ui:with field="ElementIds" type="org.rstudio.core.client.ElementIds"/>
+   <ui:style type="org.rstudio.studio.client.workbench.views.environment.dataimport.DataImportOptionsUiCsvLocale.DataImportOptionsUiCsvLocaleStyle">
+      .dialog {
+         width: 420px;
+      }
+      .textBox {
+         width: 90px;
+      }
+      table.localeTable {
+        width: 100%;
+
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      td.checkbocCell {
+        text-align: right;
+        padding-right: 8px;
+      }
+      td.spacedCell {
+        padding-left: 10px;
+      }
+      .listBox {
+        width: 90px;
+      }
+   </ui:style>
+
+   <g:HTMLPanel styleName="{style.dialog}">
+      <table class="{style.localeTable}">
+         <tr>
+            <td>
+                <rs:FormLabel text="Date Name:" for="{ElementIds.getDataImportCsvDatename}" />
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="dateName_" styleName="{style.textBox}" text="en"
+                                elementId="{ElementIds.getDataImportCsvDatename}" />
+            </td>
+            <td class="{style.spacedCell}">
+                <rs:FormLabel text="Encoding:" for="{ElementIds.getDataImportCsvEncoding}" />
+            </td>
+            <td>
+                <rs:FormListBox styleName="{style.listBox}" ui:field="encoding_"
+                                elementId="{ElementIds.getDataImportCsvEncoding}"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <rs:FormLabel text="Date Format:" for="{ElementIds.getDataImportCsvDateFormat}"/>
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="dateFormat_" styleName="{style.textBox}" text="%AD"
+                                elementId="{ElementIds.getDataImportCsvDateFormat}"/>
+            </td>
+            <td class="{style.spacedCell}">
+                <rs:FormLabel text="Time Format:" for="{ElementIds.getDataImportCsvTimeFormat}"/>
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="timeFormat_" styleName="{style.textBox}" text="%AT"
+                                elementId="{ElementIds.getDataImportCsvTimeFormat}"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <rs:FormLabel text="Decimal Mark:" for="{ElementIds.getDataImportCsvDecimalMark}"/>
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="decimalMark_" styleName="{style.textBox}" text="."
+                                elementId="{ElementIds.getDataImportCsvDecimalMark}"/>
+            </td>
+            <td class="{style.spacedCell}">
+                <rs:FormLabel text="Grouping Mark:" for="{ElementIds.getDataImportCsvGroupingMark}"/>
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="groupingMark_" styleName="{style.textBox}" text=","
+                                elementId="{ElementIds.getDataImportCsvGroupingMark}"/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <rs:FormLabel text="Time Zone:" for="{ElementIds.getDataImportCsvTz}"/>
+            </td>
+            <td>
+                <rs:FormTextBox ui:field="timeZone_" styleName="{style.textBox}" text="UTC"
+                                elementId="{ElementIds.getDataImportCsvTz}"/>
+            </td>
+            <td class="{style.spacedCell}">
+            </td>
+            <td class="{style.checkbocCell}">
+                <g:CheckBox ui:field="asciify_" text="Asciify"/>
+            </td>
+         </tr>
+      </table>
+   </g:HTMLPanel>
+
+</ui:UiBinder>
