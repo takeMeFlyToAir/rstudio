@@ -36,7 +36,7 @@ FLAVOR=$2
 VERSION=$3
 
 # abort on error
-set -e
+set -ex
 
 # set destination folder
 PKG_DIR=$(pwd)/package
